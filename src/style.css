@@ -199,12 +199,17 @@ main h2 {
     align-items: center;
 }
 
-.lang-btn button {
+.lang-btn a {
     margin: 0 !important;
     cursor: pointer;
     background: 0;
     border: none;
     font-size: 16pt;
+    transition: 0.2s ease;
+}
+
+.lang-btn a:hover {
+    opacity: 0.5;
 }
 
 .buttons {
@@ -231,11 +236,12 @@ main .hero {
     flex: 1;
 }
 
-.hero .left button {
+.hero .left a {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.7rem;
+    text-decoration: none;
 }
 
 .welcome {
@@ -763,6 +769,21 @@ footer {
         max-width: 70%;
     }
 
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lang-btn picture {
+        display: flex;
+        align-items: center;
+    }
+
+    .lang-btn img {
+        min-width: 100%;
+        width: 2rem;
+    }
+
     /*! ============== About ============= */
     .about {
         padding: 3rem var(--container-mobile);
@@ -869,5 +890,15 @@ footer {
 
     .hero img {
         max-width: 30rem;
+    }
+
+    .lang-btn picture {
+        display: flex;
+        align-items: center;
+    }
+
+    .lang-btn img {
+        min-width: 100%;
+        width: 2rem;
     }
 }

@@ -11,9 +11,7 @@ The website is built using HTML, CSS, and JavaScript. It also utilizes the follo
 
 ## Deployment
 
-The website is deployed using Netlify and can be accessed at https://haidar038.netlify.app
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b1458dc8-a2c1-4273-89fa-4c548b4736be/deploy-status)](https://app.netlify.com/sites/haidar038/deploys)
+The website is deployed using GitHub Pages and can be accessed at https://khaidar.me
 
 ## Features
 

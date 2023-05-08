@@ -451,7 +451,7 @@ main .hero {
 /* TODO =================== Resume ================== */
 
 .resume {
-    background-color: var(--color-dark-3);
+    background-color: var(--color-dark-2);
     padding: 3rem var(--container-padding);
 }
 

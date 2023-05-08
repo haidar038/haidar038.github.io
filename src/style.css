@@ -411,7 +411,7 @@ main .hero {
 }
 
 .projects .card {
-    background: var(--color-dark-2);
+    background: var(--color-dark-3);
     border-radius: 15px;
     display: inline-block;
 }
@@ -476,14 +476,14 @@ main .hero {
 
 .resume .line {
     height: 2rem;
-    background-image: linear-gradient(var(--color-dark-2), var(--color-dark-2));
+    background-image: linear-gradient(var(--color-dark), var(--color-dark));
     background-repeat: no-repeat;
     background-position: center;
     background-size: 2px 100%;
 }
 
 .resume .card {
-    background-color: var(--color-dark-2);
+    background-color: var(--color-dark);
     padding: 1rem 1.5rem;
     transition: 0.2s ease;
 }

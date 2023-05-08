@@ -826,7 +826,7 @@ footer {
     /*! ============== Projects ============ */
 
     .projects {
-        padding: 3rem var(--container-mobile) var(--container-mobile) 0;
+        padding: 3rem var(--container-mobile) 0 var(--container-mobile);
     }
 
     .projects .container {

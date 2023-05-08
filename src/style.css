@@ -930,4 +930,24 @@ footer {
     .projects img{
         opacity: 1 !important;
     }
+    
+    #nav-home,
+    #nav-projects,
+    #nav-about,
+    #nav-resume,
+    #nav-contact {
+        position: relative !important;
+        transform: translate(0, -1rem) !important;
+        display: none !important;
+    }
+
+    a:hover #nav-home,
+    a:hover #nav-projects,
+    a:hover #nav-about,
+    a:hover #nav-resume,
+    a:hover #nav-contact {
+        opacity: 0 !important;
+        padding-top: -2.5rem !important;
+        display: none !important;
+    }
 }

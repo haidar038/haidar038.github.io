@@ -737,6 +737,26 @@ footer {
     nav ul {
         justify-content: center;
     }
+    
+    #nav-home,
+    #nav-projects,
+    #nav-about,
+    #nav-resume,
+    #nav-contact {
+        position: relative !important;
+        transform: translate(0, -1rem) !important;
+        display: none !important;
+    }
+
+    a:hover #nav-home,
+    a:hover #nav-projects,
+    a:hover #nav-about,
+    a:hover #nav-resume,
+    a:hover #nav-contact {
+        opacity: 0 !important;
+        padding-top: -2.5rem !important;
+        display: none !important;
+    }
 
     main .hero {
         padding: 0 var(--container-mobile);
@@ -806,10 +826,11 @@ footer {
     /*! ============== Projects ============ */
 
     .projects {
-        padding: 3rem var(--container-mobile);
+        padding: 3rem var(--container-mobile) var(--container-mobile) 0;
     }
 
     .projects .container {
+        padding-bottom: 0;
         column-count: 2;
     }
     .projects .mb-2 {

@@ -411,7 +411,7 @@ main .hero {
 }
 
 .projects .card {
-    background: var(--color-dark-3);
+    background: var(--color-dark-2);
     border-radius: 15px;
     display: inline-block;
 }

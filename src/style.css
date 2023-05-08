@@ -742,7 +742,7 @@ footer {
         padding: 0 var(--container-mobile);
         flex-wrap: wrap;
         align-items: normal;
-        justify-content: none;
+        justify-content: center !important;
     }
 
     .hero .welcome {
@@ -817,6 +817,10 @@ footer {
     }
     .projects .card {
         margin-bottom: 2rem !important;
+    }
+    
+    .projects img{
+        opacity: 1 !important;
     }
 
     /*! =============== Resume =============== */
@@ -900,5 +904,9 @@ footer {
     .lang-btn img {
         min-width: 100%;
         width: 2rem;
+    }
+    
+    .projects img{
+        opacity: 1 !important;
     }
 }

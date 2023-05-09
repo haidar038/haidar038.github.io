@@ -204,7 +204,6 @@ main h2 {
     cursor: pointer;
     background: 0;
     border: none;
-    font-size: 16pt;
     transition: 0.2s ease;
 }
 

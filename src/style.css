@@ -275,6 +275,9 @@ main .hero {
 
 .about .container {
     padding: 2rem 0;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
 }
 
 .about img {
@@ -401,18 +404,82 @@ main .hero {
 
 .projects .container {
     padding: 2rem 0;
-    column-count: 4;
-    column-gap: 2em;
+    overflow: hidden;
 }
 
-.projects .container .mb-2 {
-    margin-bottom: 2rem;
+.projects .carousel {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-dark-2) var(--color-dark-3);
+}
+
+.projects .carousel::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.projects .carousel::-webkit-scrollbar-thumb {
+    background-color: var(--color-dark-3);
+    border-radius: 3px;
+}
+
+.projects .carousel::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-dark-1);
+}
+
+.projects .carousel::-webkit-scrollbar-track {
+    background-color: var(--color-dark-2);
+}
+
+.projects .carousel-inner {
+    display: flex;
+    gap: 1rem;
 }
 
 .projects .card {
     background: var(--color-dark-3);
     border-radius: 15px;
     display: inline-block;
+    max-width: calc(100% / 4);
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    text-align: center;
+}
+
+.projects .controls {
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.projects .controls button {
+    display: flex;
+    align-items: center;
+}
+
+.projects .card img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    opacity: 0.5;
+    transition: 0.2s ease;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+    object-position: top left;
+}
+
+.projects .card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
 }
 
 .projects .card a {
@@ -423,28 +490,12 @@ main .hero {
     gap: 0.5rem;
 }
 
-.projects .card-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.projects .card img {
-    border-radius: 15px;
-    width: 100%;
-    opacity: 0.5;
-    transition: 0.2s ease;
+.projects .container .mb-2 {
+    margin-bottom: 2rem;
 }
 
 .projects .card:hover img {
     opacity: 1;
-    scale: 1.05;
-}
-
-.projects .card-text {
-    padding: 1rem;
-    text-align: center;
 }
 
 /* TODO =================== Resume ================== */
@@ -736,7 +787,7 @@ footer {
     nav ul {
         justify-content: center;
     }
-    
+
     #nav-home,
     #nav-projects,
     #nav-about,
@@ -809,6 +860,7 @@ footer {
     }
 
     .about .container {
+        gap: 2rem;
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -828,19 +880,29 @@ footer {
         padding: 3rem var(--container-mobile) 0 var(--container-mobile);
     }
 
+    .projects .carousel {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
     .projects .container {
         padding-bottom: 0;
-        column-count: 2;
     }
+
     .projects .mb-2 {
         margin-bottom: 0;
     }
+
     .projects .card {
-        margin-bottom: 2rem !important;
+        width: 100%;
+        flex: 0 0 auto;
+        width: calc(100% - 16px);
     }
-    
-    .projects img{
-        opacity: 1 !important;
+
+    .projects .card img {
+        opacity: 1;
     }
 
     /*! =============== Resume =============== */
@@ -925,28 +987,8 @@ footer {
         min-width: 100%;
         width: 2rem;
     }
-    
-    .projects img{
-        opacity: 1 !important;
-    }
-    
-    #nav-home,
-    #nav-projects,
-    #nav-about,
-    #nav-resume,
-    #nav-contact {
-        position: relative !important;
-        transform: translate(0, -1rem) !important;
-        display: none !important;
-    }
 
-    a:hover #nav-home,
-    a:hover #nav-projects,
-    a:hover #nav-about,
-    a:hover #nav-resume,
-    a:hover #nav-contact {
-        opacity: 0 !important;
-        padding-top: -2.5rem !important;
-        display: none !important;
+    .projects img {
+        opacity: 1 !important;
     }
 }
